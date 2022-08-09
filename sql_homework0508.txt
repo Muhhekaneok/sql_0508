@@ -1,0 +1,49 @@
+Веб-магазин в песочнице.
+
+// First level  ---------------------
+
+SELECT 
+	customerName
+FROM [Customers];
+
+SELECT 
+	*
+FROM [Customers]
+where city = 'Berlin';
+
+SELECT 
+	ContactName
+FROM [Customers]
+where city = 'London';
+
+// Second level ----------------------
+
+create table users (
+	user_id	numeric(3),
+  	name	varchar(20),
+  	phone	numeric(15),
+  	country	varchar(10)
+);
+
+insert into users (
+  	user_id,
+  	name,
+  	phone,
+  	country
+) values (
+	1,
+  	'Joe Biden',
+  	+111111,
+  	'USA'
+), (
+  	2,
+  	'Olaf Scholz',
+  	+222222,
+  	'Germany'
+), (
+  	3,
+  	'Emmanuel Jean-Michel Frédéric Macron',
+  	+333333,
+  	'France'
+)
+ 
